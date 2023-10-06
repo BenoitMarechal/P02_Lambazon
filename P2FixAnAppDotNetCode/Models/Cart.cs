@@ -8,18 +8,19 @@ namespace P2FixAnAppDotNetCode.Models
     /// </summary>
     public class Cart : ICart
     {
+        //Change:  private cartLine
+        private List<CartLine> cartLines = new List<CartLine>();
         /// <summary>
         /// Read-only property for dispaly only
         /// </summary>
-        public IEnumerable<CartLine> Lines => GetCartLineList();
-
+        public IEnumerable<CartLine> Lines => cartLines;
         /// <summary>
         /// Return the actual cartline list
         /// </summary>
         /// <returns></returns>
         private List<CartLine> GetCartLineList()
         {
-            return new List<CartLine>();
+            return cartLines;
         }
 
         /// <summary>
@@ -28,6 +29,18 @@ namespace P2FixAnAppDotNetCode.Models
         public void AddItem(Product product, int quantity)
         {
             // TODO implement the method
+            CartLine latestLine = new CartLine { OrderLineId = cartLines.Count, Product = product, Quantity = quantity };
+            if (FindProductInCartLines(product.Id)!=null){
+                CartLine foundLine = cartLines.Find(line => line.Product.Id == product.Id);
+                int newQuantity = foundLine.Quantity + quantity;
+                RemoveLine(product);
+                AddItem(product, newQuantity);   
+            }
+            else
+            {              
+                     cartLines.Add(latestLine);
+            }
+            // DONE
         }
 
         /// <summary>
@@ -57,15 +70,17 @@ namespace P2FixAnAppDotNetCode.Models
         /// <summary>
         /// Looks after a given product in the cart and returns if it finds it
         /// </summary>
-        public Product FindProductInCartLines(int productId)         
-        
-
-      
-
+        public Product FindProductInCartLines(int productId)  
         {
             // TODO implement the method
-            return null;
-        }
+
+            CartLine foundLine = cartLines.Find(line => line.Product.Id == productId);
+            if (foundLine != null) { return foundLine.Product; }
+            else
+            {
+                return null;
+            }
+        } //DONE, test OK
 
         /// <summary>
         /// Get a specifid cartline by its index
