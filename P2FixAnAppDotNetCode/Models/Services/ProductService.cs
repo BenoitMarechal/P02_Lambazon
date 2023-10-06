@@ -24,6 +24,7 @@ namespace P2FixAnAppDotNetCode.Models.Services
         {
             // TODO change the return type from array to List<T> and propagate the change
             // thoughout the application
+            //DONE!
             return _productRepository.GetAllProducts();
         }
 
