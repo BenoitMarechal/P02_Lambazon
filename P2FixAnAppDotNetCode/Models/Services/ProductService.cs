@@ -34,8 +34,13 @@ namespace P2FixAnAppDotNetCode.Models.Services
         public Product GetProductById(int id)
         {
             // TODO implement the method
-            return null;
-        }
+            Product foundProduct = _productRepository.GetAllProducts().Find(Product => Product.Id == id);
+            if(foundProduct != null) { return  foundProduct; }
+            else
+            {
+                return null;
+            }
+        }  // DONE, testOK
 
         /// <summary>
         /// Update the quantities left for each product in the inventory depending of ordered the quantities
@@ -44,6 +49,10 @@ namespace P2FixAnAppDotNetCode.Models.Services
         {
             // TODO implement the method
             // update product inventory by using _productRepository.UpdateProductStocks() method.
+            //_productRepository.UpdateProductStocks()
+
+
+
         }
     }
 }
