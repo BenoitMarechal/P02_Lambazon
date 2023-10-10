@@ -9,7 +9,7 @@ namespace P2FixAnAppDotNetCode.Models
     public class Cart : ICart
     {
         //Change:  private cartLine
-        private List<CartLine> cartLines = new List<CartLine>();
+        public List<CartLine> cartLines = new List<CartLine>();
         /// <summary>
         /// Read-only property for dispaly only
         /// </summary>
@@ -30,12 +30,12 @@ namespace P2FixAnAppDotNetCode.Models
         {
             // TODO implement the method
             CartLine latestLine = new CartLine { OrderLineId = cartLines.Count, Product = product, Quantity = quantity };
-            if (FindProductInCartLines(product.Id)!=null){
+            if (FindProductInCartLines(product.Id) != null)
+            {
                 CartLine foundLine = cartLines.Find(line => line.Product.Id == product.Id);
                 int newQuantity = foundLine.Quantity + quantity;
-                RemoveLine(product);
-                AddItem(product, newQuantity);   
-            }
+                foundLine.Quantity = newQuantity;   
+            }          
             else
             {              
                      cartLines.Add(latestLine);
@@ -54,8 +54,15 @@ namespace P2FixAnAppDotNetCode.Models
         /// </summary>
         public double GetTotalValue()
         {
+
             // TODO implement the method
-            return 0.0;
+            double result = 0.0;
+            foreach (CartLine line in GetCartLineList())
+            {
+                result=result+(line.Quantity * line.Product.Price);
+            }   
+
+            return result;
         }
 
         /// <summary>
@@ -64,7 +71,23 @@ namespace P2FixAnAppDotNetCode.Models
         public double GetAverageValue()
         {
             // TODO implement the method
-            return 0.0;
+            int numberOfProducts = 0;
+
+            foreach (CartLine line in GetCartLineList())
+            {
+                numberOfProducts = numberOfProducts + line.Quantity;
+            }
+            if(numberOfProducts > 0)
+            {
+                double averageValue = (GetTotalValue() / numberOfProducts);
+                return averageValue;
+            }
+            else
+            {
+                return 0.0;
+            }
+
+                
         }
 
         /// <summary>
