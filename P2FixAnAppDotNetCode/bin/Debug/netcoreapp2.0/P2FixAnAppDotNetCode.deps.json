@@ -40,6 +40,9 @@
           },
           "fr/P2FixAnAppDotNetCode.resources.dll": {
             "locale": "fr"
+          },
+          "es/P2FixAnAppDotNetCode.resources.dll": {
+            "locale": "es"
           }
         },
         "compile": {

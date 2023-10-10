@@ -80,3 +80,8 @@ C:\Users\benoi\Documents\ALTERNANCE\P02_Lambazon\P02_Lamabzon\P2FixAnAppDotNetCo
 C:\Users\benoi\Documents\ALTERNANCE\P02_Lambazon\P02_Lamabzon\P2FixAnAppDotNetCode\obj\Debug\netcoreapp2.0\P2FixAnAppDotNetCode.dll
 C:\Users\benoi\Documents\ALTERNANCE\P02_Lambazon\P02_Lamabzon\P2FixAnAppDotNetCode\obj\Debug\netcoreapp2.0\P2FixAnAppDotNetCode.pdb
 C:\Users\benoi\Documents\ALTERNANCE\P02_Lambazon\P02_Lamabzon\P2FixAnAppDotNetCode\obj\Debug\netcoreapp2.0\P2FixAnAppDotNetCode.genruntimeconfig.cache
+C:\Users\benoi\Documents\ALTERNANCE\P02_Lambazon\P02_Lamabzon\P2FixAnAppDotNetCode\bin\Debug\netcoreapp2.0\es\P2FixAnAppDotNetCode.resources.dll
+C:\Users\benoi\Documents\ALTERNANCE\P02_Lambazon\P02_Lamabzon\P2FixAnAppDotNetCode\obj\Debug\netcoreapp2.0\P2FixAnAppDotNetCode.Resources.Views.Cart.Index.es.resources
+C:\Users\benoi\Documents\ALTERNANCE\P02_Lambazon\P02_Lamabzon\P2FixAnAppDotNetCode\obj\Debug\netcoreapp2.0\P2FixAnAppDotNetCode.Resources.Views.Shared.Components.CartSummary.Default.es.resources
+C:\Users\benoi\Documents\ALTERNANCE\P02_Lambazon\P02_Lamabzon\P2FixAnAppDotNetCode\obj\Debug\netcoreapp2.0\P2FixAnAppDotNetCode.Resources.Views.Shared.Components.LanguageSelector.Default.es.resources
+C:\Users\benoi\Documents\ALTERNANCE\P02_Lambazon\P02_Lamabzon\P2FixAnAppDotNetCode\obj\Debug\netcoreapp2.0\es\P2FixAnAppDotNetCode.resources.dll
