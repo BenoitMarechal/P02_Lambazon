@@ -23,30 +23,51 @@ namespace P2FixAnAppDotNetCode.Models.Services
         /// </summary>
         public string SetCulture(string language)
         {
-            string culture = "en";
+            string culture = "en-GB";
 
             // TODO complete the code 
             // Default language is "en", french is "fr" and spanish is "es".
             //DONE (see switch)
 
+            //   switch (language)
+            //   {
+            //       case "French": culture = "fr";
+            //           break;
+            //       case "Spanish":
+            //           culture = "es";
+            //            break;
+            //        case "English":
+            //            culture = "en";
+            //            break;                
+            //    }    
+            //    return culture;
+            //}
             switch (language)
             {
-                case "French": culture = "fr";
-                    break;
-                case "Spanish":
-                    culture = "es";
-                    break;
+                case "Anglais":
                 case "English":
-                    culture = "en";
-                    break;                
-            }    
+                case "Inglés":
+                    culture = "en-GB";
+                    break;
+                case "Français":
+                case "French":
+                case "Francés":
+                    culture = "fr-FR";
+                    break;
+                case "Espagnol":
+                case "Spanish":
+                case "Español":
+                    culture = "es-ES";
+                    break;
+
+            }
             return culture;
         }
 
-        /// <summary>
-        /// Update the culture cookie
-        /// </summary>
-        public void UpdateCultureCookie(HttpContext context, string culture)
+            /// <summary>
+            /// Update the culture cookie
+            /// </summary>
+            public void UpdateCultureCookie(HttpContext context, string culture)
         {
             context.Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,

@@ -117,37 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Address" xml:space="preserve">
-    <value>Adresse</value>
+  <data name="ErrorMissingAddress" xml:space="preserve">
+    <value>Por favor indica una direccion</value>
   </data>
-  <data name="City" xml:space="preserve">
-    <value>Ville</value>
+  <data name="ErrorMissingCity" xml:space="preserve">
+    <value>Por favor indica una cuidad</value>
   </data>
-  <data name="CompleteOrder" xml:space="preserve">
-    <value>Terminer la commande</value>
+  <data name="ErrorMissingCountry" xml:space="preserve">
+    <value>Por favor indica un pais</value>
   </data>
-  <data name="Country" xml:space="preserve">
-    <value>Pays</value>
-  </data>
-  <data name="EnterDetails" xml:space="preserve">
-    <value>Et on s'occupe de votre commande tout de suite !</value>
-  </data>
-  <data name="Location" xml:space="preserve">
-    <value>Localisation</value>
-  </data>
-  <data name="Name" xml:space="preserve">
-    <value>Nom</value>
-  </data>
-  <data name="OrderTitle" xml:space="preserve">
-    <value>Veuillez remplir le formulaire</value>
-  </data>
-  <data name="ShipSoon" xml:space="preserve">
-    <value>Nous vous l'expédions aussi vite que possible.</value>
-  </data>
-  <data name="ShipTo" xml:space="preserve">
-    <value>Envoyer à</value>
-  </data>
-  <data name="Zip" xml:space="preserve">
-    <value>Code postal</value>
+  <data name="ErrorMissingName" xml:space="preserve">
+    <value>Por favor indica un nombre</value>
   </data>
 </root>

@@ -52,7 +52,7 @@ namespace P2FixAnAppDotNetCode
                    new CultureInfo("es-ES"),
                 };
 
-                opts.DefaultRequestCulture = new RequestCulture("en");
+                opts.DefaultRequestCulture = new RequestCulture("en-GB");
                 // Formatting numbers, dates, etc.
                 opts.SupportedCultures = supportedCultures;
                 // UI strings that we have localized.
@@ -65,6 +65,13 @@ namespace P2FixAnAppDotNetCode
         {
             app.UseStaticFiles();
             var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.Use(async (context, next) =>
+            {
+                CultureInfo.CurrentCulture = new CultureInfo("en-GB");
+                CultureInfo.CurrentUICulture = new CultureInfo("en-GB");
+                await next.Invoke();
+            });
+
             app.UseRequestLocalization(options.Value);
             app.UseSession();
             app.UseMvc(routes =>

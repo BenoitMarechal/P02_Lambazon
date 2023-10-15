@@ -118,36 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Address" xml:space="preserve">
-    <value>Adresse</value>
+    <value>Dirección</value>
   </data>
   <data name="City" xml:space="preserve">
-    <value>Ville</value>
+    <value>Cuidad</value>
   </data>
   <data name="CompleteOrder" xml:space="preserve">
-    <value>Terminer la commande</value>
+    <value>Finalizar el pedido</value>
   </data>
   <data name="Country" xml:space="preserve">
-    <value>Pays</value>
+    <value>País</value>
   </data>
   <data name="EnterDetails" xml:space="preserve">
-    <value>Et on s'occupe de votre commande tout de suite !</value>
+    <value>Nos ocupamos de su compra immediatamente</value>
   </data>
   <data name="Location" xml:space="preserve">
-    <value>Localisation</value>
+    <value>Direccion</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Nom</value>
+    <value>Nombre</value>
   </data>
   <data name="OrderTitle" xml:space="preserve">
-    <value>Veuillez remplir le formulaire</value>
+    <value>Por favor rellene el formulario</value>
   </data>
   <data name="ShipSoon" xml:space="preserve">
-    <value>Nous vous l'expédions aussi vite que possible.</value>
+    <value>Le enviaremos su compra a la mayor brevedad</value>
   </data>
   <data name="ShipTo" xml:space="preserve">
-    <value>Envoyer à</value>
+    <value>Mandar a</value>
   </data>
   <data name="Zip" xml:space="preserve">
-    <value>Code postal</value>
+    <value>Código postal</value>
   </data>
 </root>

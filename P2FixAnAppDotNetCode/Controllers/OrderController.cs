@@ -36,6 +36,11 @@ namespace P2FixAnAppDotNetCode.Controllers
             }
             else
             {
+                if (order.Name=="")
+                {
+                    ModelState.AddModelError("", _localizer["ErrorMissingName"]);
+                }
+               
                 return View(order);
             }
         }

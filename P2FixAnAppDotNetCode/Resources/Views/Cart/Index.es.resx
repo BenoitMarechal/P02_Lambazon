@@ -121,10 +121,10 @@
     <value>Valor medio</value>
   </data>
   <data name="Checkout" xml:space="preserve">
-    <value>Passer la commande</value>
+    <value>Hacer el pedido</value>
   </data>
   <data name="ContinueShopping" xml:space="preserve">
-    <value>Continuer les achats</value>
+    <value>Seguir comporando</value>
   </data>
   <data name="Item" xml:space="preserve">
     <value>Producto</value>
