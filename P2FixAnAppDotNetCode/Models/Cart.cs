@@ -14,6 +14,8 @@ namespace P2FixAnAppDotNetCode.Models
         /// Read-only property for dispaly only
         /// </summary>
         public IEnumerable<CartLine> Lines => cartLines;
+
+
         /// <summary>
         /// Return the actual cartline list
         /// </summary>
@@ -26,6 +28,8 @@ namespace P2FixAnAppDotNetCode.Models
         /// <summary>
         /// Adds a product in the cart or increment its quantity in the cart if already added
         /// </summary>//
+        /// 
+        public static int cartLineId = 0;
         public void AddItem(Product product, int quantity)
         {
             // TODO implement the method
@@ -38,7 +42,7 @@ namespace P2FixAnAppDotNetCode.Models
             }          
             else
             {
-                CartLine newLine = new CartLine { OrderLineId = cartLines.Count, Product = product, Quantity = quantity };
+                CartLine newLine = new CartLine { OrderLineId = cartLineId++, Product = product, Quantity = quantity };
                 cartLines.Add(newLine);
             }
             // DONE
