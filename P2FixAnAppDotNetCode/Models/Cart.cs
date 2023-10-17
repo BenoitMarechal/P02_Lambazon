@@ -29,7 +29,7 @@ namespace P2FixAnAppDotNetCode.Models
         public void AddItem(Product product, int quantity)
         {
             // TODO implement the method
-            CartLine latestLine = new CartLine { OrderLineId = cartLines.Count, Product = product, Quantity = quantity };
+            
             if (FindProductInCartLines(product.Id) != null)
             {
                 CartLine foundLine = cartLines.Find(line => line.Product.Id == product.Id);
@@ -37,8 +37,9 @@ namespace P2FixAnAppDotNetCode.Models
                 foundLine.Quantity = newQuantity;   
             }          
             else
-            {              
-                     cartLines.Add(latestLine);
+            {
+                CartLine newLine = new CartLine { OrderLineId = cartLines.Count, Product = product, Quantity = quantity };
+                cartLines.Add(newLine);
             }
             // DONE
         }
