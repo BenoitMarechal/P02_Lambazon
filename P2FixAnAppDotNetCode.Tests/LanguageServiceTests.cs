@@ -20,7 +20,7 @@ namespace P2FixAnAppDotNetCode.Tests
             
 
             // Assert
-            Assert.Same("fr", culture);
+            Assert.Same("fr-FR", culture);
         }
     }
 }
