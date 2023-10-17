@@ -25,8 +25,7 @@ namespace P2FixAnAppDotNetCode.Models.Services
         {
             string culture = "en-GB";
 
-            // TODO complete the code 
-             culture;
+            // TODO complete the code            
             //}
             switch (language)
             {
